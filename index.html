@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+            rel="stylesheet">
+        <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #4caf50;
+            --secondary-color: #333;
+            --light-color: #f4f4f9;
+        }
+
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--secondary-color);
+            line-height: 1.6;
+            background: #f4f4f9;
+        }
+
+        /* Header */
+        header {
+            background: var(--secondary-color);
+            color: var(--light-color);
+            padding: 1em 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--light-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a.active {
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3em 10%;
+            background: linear-gradient(135deg, var(--primary-color), #e2e4e2);
+            color: #fff;
+            border-bottom: 5px solid var(--secondary-color);
+        }
+
+        .hero .intro {
+            max-width: 50%;
+        }
+
+        .hero h2 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+        }
+
+        .hero button {
+            padding: 0.75em 1.5em;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            border: none;  
+            margin-top: 20px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .hero button:hover {
+            background: #222;
+        }
+
+        .hero .profile-img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            border: 5px solid transparent;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            background-clip: padding-box;
+        }
+
+        /* Slider Section */
+        .slider-container {
+            margin-top: 1.5em;
+            text-align: center;
+            color: var(--secondary-color);
+        }
+
+        .slider {
+            display: inline-block;
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--primary-color);
+            overflow: hidden;
+            height: 1.5em;
+            position: relative;
+        }
+
+        .slider span {
+            position: absolute;
+            width: 100%;
+            animation: slide 6s infinite;
+        }
+
+        .slider span:nth-child(1) { animation-delay: 0s; }
+        .slider span:nth-child(2) { animation-delay: 2s; }
+        .slider span:nth-child(3) { animation-delay: 4s; }
+
+        @keyframes slide {
+            0%, 30% { opacity: 1; transform: translateY(0); }
+            35%, 100% { opacity: 0; transform: translateY(-100%); }
+        }
+
+        /* About and Contact Section */
+        .content-section {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 2em 10%;
+            display: flex;
+            gap: 2em;
+            flex-wrap: wrap;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons img:hover {
+            transform: scale(1.2);
+            filter: brightness(1.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        footer p {
+            margin-bottom: 0.5em;
+        }
+
+        footer strong {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero .intro, .hero .profile-img {
+                max-width: 100%;
+            }
+
+            nav ul {
+                flex-direction: row;
+                gap: 10px;
+            }
+
+            html {
+                font-size: 14px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        a{
+            color:var(--primary-color);
+        }
+    </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <h1>ANDA</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="intro">
+                <h2>Hello, I am Anda Gwele</h2>
+                <p>I am a passionate front-end developer with expertise in HTML,
+                    CSS, JavaScript, and PHP, dedicated to building visually
+                    engaging, responsive, and user-centered websites. I
+                    specialize in transforming ideas into functional, stunning
+                    digital experiences that help businesses connect with their
+                    audience and achieve their goals..</p>
+                <div class="slider-container">
+                    <span class="slider">
+                        <span>Web Developer</span>
+                        <span>Photographer</span>
+                        <span>UI/UX Designer</span>
+                    </span>
+                </div>
+
+            </div>
+            <img src="My pic.jpg" alt="Profile Image" class="profile-img">
+            <button><a href="CV DOCIE.docx">Download CV</a></button>
+        </section>
+
+        <!-- About Section -->
+        <section class="content-section" id="about">
+            <div data-aos="fade-up">
+                <h3>About Me</h3>
+                <p>With a strong background in front-end technologies, I bring a
+                    blend of creative and technical expertise to each project.
+                    Whether it's developing interactive elements, designing
+                    user-friendly layouts, or optimizing performance, I ensure
+                    every site I create is visually appealing and functional,
+                    meeting the highest standards for user experience.</p>
+                <div class="social-icons">
+                    <a
+                        href="https://www.facebook.com/anda.gwele.1?mibextid=ZbWKwL "><img
+                            src="icons8-facebook-24.png" alt="Facebook"></a>
+                    <a
+                        href="https://www.instagram.com/anda_gwele/profilecard/?igsh=MWpxNXFtcTBhMXZ0bQ== "><img
+                            src="icons8-instagram-30.png"
+                            alt="Instagram"></a>
+                    <a
+                        href="https://www.linkedin.com/in/anda-gwele-58127524b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><img
+                            src="icons8-linkedin-logo-30.png"
+                            alt="LinkedIn"></a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>For more information and inquiries, click
+                <strong><a href="contact.html">HERE</a></strong></p>
+            <p>All information presented is accurate and based on
+                experience.</p>
+        </footer>
+
+        <!-- AOS Animation Library -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true      // Only animate elements once
+        });
+    </script>
+    </body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Me</title>
+        <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #4caf50;
+            --secondary-color: #333;
+            --light-color: #f4f4f9;
+        }
+
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--secondary-color);
+            line-height: 1.6;
+            background: var(--light-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--secondary-color);
+            color: var(--light-color);
+            padding: 1em 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--light-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a.active {
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 3em 10%;
+            background: #fff;
+        }
+
+        .contact h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            margin-bottom: 1.5em;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .contact-form button {
+            padding: 1em;
+            background: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background 0.3s;
+        }
+
+        .contact-form button:hover {
+            background: #3a8f42;
+        }
+
+        .contact-info {
+            margin-top: 2em;
+            text-align: center;
+        }
+
+        .contact-info p {
+            margin: 0.5em 0;
+            font-size: 1.2em;
+        }
+
+        .contact-info a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        footer p {
+            margin-bottom: 0.5em;
+        }
+
+        footer strong {
+            color: var(--primary-color);
+        }
+        .error{
+            color:red;
+        }
+        .send{
+            color:var(--primary-color);
+        }
+    </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <h1>ANDA</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                    <li><a href="#" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Get in Touch</h2>
+            <form class="contact-form" method="post" onsubmit="submitOrder()">
+                <input type="text" id="name" name="name" placeholder="Your Name"
+                    required>
+                <input type="email" id="email" name="email"
+                    placeholder="Your Email"
+                    required>
+                <textarea name="message" id="message" rows="5"
+                    placeholder="Your Message"
+                    required></textarea>
+                <button type="submit">Send
+                    Message</button>
+                <div class="error"></div>
+            </form>
+            <div class="contact-info">
+                <p><strong>Phone:</strong> 064 789 8126</p>
+                <p><strong>Email:</strong> <a
+                        href="mailto:andagwele1@gmail.com">andagwele1@gmail.com</a></p>
+                <p><strong>Follow Me:</strong></p>
+                <p>
+                    <a
+                        href="https://www.facebook.com/anda.gwele.1?mibextid=ZbWKwL ">Facebook</a>
+                    |
+                    <a
+                        href="https://www.instagram.com/anda_gwele/profilecard/?igsh=MWpxNXFtcTBhMXZ0bQ== ">Instagram</a>
+                    |
+                    <a
+                        href="https://www.linkedin.com/in/anda-gwele-58127524b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ">LinkedIn</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>For inquiries, email me directly or use the form above!</p>
+            <p>&copy; 2024 Anda Gwele. All Rights Reserved.</p>
+        </footer>
+        <script>
+          function CheckIfFilled() {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    let errorDiv = document.querySelector(".error");
+
+    // Clear any previous error message
+    errorDiv.textContent = "";
+
+    if (!name || !email || !message) {
+        errorDiv.textContent = "Please fill in all fields to send the message.";
+        return false;
+    }
+
+    return true;
+}
+
+        function submitOrder() {
+            if (CheckIfFilled()) {
+                const subject = "Portfolio contact";
+                let message = document.getElementById("message").value;
+                const body = message;
+                alert("Noted, The website will proceed to your default mailing service.Please be patient");
+                const mailtoLink = `mailto:andagwele1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                window.location.href = mailtoLink;
+            }
+        }
+        </script>
+    </body>
+</html>
