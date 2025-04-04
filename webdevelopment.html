@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Services</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+            rel="stylesheet">
+        <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #4caf50;
+            --secondary-color: #333;
+            --light-color: #f4f4f9;
+        }
+
+        /* Reset and basic styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: var(--secondary-color);
+            line-height: 1.6;
+            background: var(--light-color);
+        }
+
+        /* Header */
+        header {
+            background: var(--secondary-color);
+            color: var(--light-color);
+            padding: 1em 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--light-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a.active {
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 3em 10%;
+            background: #fff;
+        }
+
+        .services h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: var(--secondary-color);
+            margin-bottom: 1.5em;
+        }
+
+        .service-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+
+        .service {
+            background: var(--light-color);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 1.5em;
+            max-width: 300px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+        }
+
+        .service img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        .service h3 {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-bottom: 0.5em;
+        }
+
+        .service p {
+            font-size: 1em;
+            margin-bottom: 1em;
+        }
+
+        .service button {
+            padding: 0.75em 1.5em;
+            background: var(--primary-color);
+            color: var(--light-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .service button:hover {
+            background: #3a8f42;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        footer p {
+            margin-bottom: 0.5em;
+        }
+
+        footer strong {
+            color: var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            html {
+                font-size: 14px;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+            <h1>ANDA</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Services.html" >Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Services Section -->
+        <section class="services">
+            <h2>My Projects</h2>
+            <div class="service-container">
+                <div class="service" data-aos="fade-up">
+                    <img src="webdev.jpeg" alt="Photography">
+                    <h3>Rental Website</h3>
+                    <p>Bhadela Tradings's website that allows them to demo their products thata are available for hire</p>
+                    <button><a href="Https://https://bhadelatrading.github.io/HIRE">Visit Demo</a></button>
+                </div>
+                <div class="service" data-aos="fade-up" data-aos-delay="100">
+                    <img src="webdev.jpeg" alt="Web Development">
+                    <h3>Towing Website</h3>
+                    <p>Website that is used for Towing business </p>
+                    <button><a href="https://andagwele.github.io/RSRescue/">Learn more</a></button>
+                </div>
+                <div class="service" data-aos="fade-up" data-aos-delay="200">
+                    <img src="webdev.jpeg" alt="UI/UX Design">
+                    <h3>Side Projects</h3>
+                    <p>This is part of a final year project that i was part of</p>
+                    <button><a href="https://andagwele.github.io/RUfixed-Final/">Learn more</a></button>
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>For more information and inquiries, click
+                <strong>HERE</strong></p>
+            <p>All information presented is accurate and based on
+                experience.</p>
+        </footer>
+
+        <!-- AOS Animation Library -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true      // Only animate elements once
+        });
+    </script>
+    </body>
+</html>
