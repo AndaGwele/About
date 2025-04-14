@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
-            rel="stylesheet">
-        <style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anda Gwele - Portfolio</title>
+    <style>
         /* CSS Variables */
         :root {
             --primary-color: #4caf50;
@@ -23,15 +21,15 @@
 
         body {
             font-family: Arial, sans-serif;
-            color: var(--secondary-color);
+            color: #333;
             line-height: 1.6;
             background: #f4f4f9;
         }
 
         /* Header */
         header {
-            background: var(--secondary-color);
-            color: var(--light-color);
+            background: #333;
+            color: #f4f4f9;
             padding: 1em 10%;
             display: flex;
             justify-content: space-between;
@@ -44,7 +42,7 @@
 
         header h1 {
             font-size: 1.8em;
-            color: var(--primary-color);
+            color: #4caf50;
         }
 
         nav ul {
@@ -55,17 +53,17 @@
 
         nav a {
             text-decoration: none;
-            color: var(--light-color);
+            color: #f4f4f9;
             font-weight: 500;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--primary-color);
+            color: #4caf50;
         }
 
         nav a.active {
-            border-bottom: 2px solid var(--primary-color);
+            border-bottom: 2px solid #4caf50;
         }
 
         /* Hero Section */
@@ -74,9 +72,9 @@
             justify-content: space-between;
             align-items: center;
             padding: 3em 10%;
-            background: linear-gradient(135deg, var(--primary-color), #e2e4e2);
+            background: linear-gradient(135deg, #4caf50, #e2e4e2);
             color: #fff;
-            border-bottom: 5px solid var(--secondary-color);
+            border-bottom: 5px solid #333;
         }
 
         .hero .intro {
@@ -95,8 +93,8 @@
 
         .hero button {
             padding: 0.75em 1.5em;
-            background: var(--secondary-color);
-            color: var(--light-color);
+            background: #333;
+            color: #f4f4f9;
             border: none;  
             margin-top: 20px;
             border-radius: 5px;
@@ -116,7 +114,7 @@
             object-fit: cover;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
             border: 5px solid transparent;
-            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(45deg, #4caf50, #333);
             background-clip: padding-box;
         }
 
@@ -124,14 +122,14 @@
         .slider-container {
             margin-top: 1.5em;
             text-align: center;
-            color: var(--secondary-color);
+            color: #333;
         }
 
         .slider {
             display: inline-block;
             font-size: 1.5em;
             font-weight: 600;
-            color: var(--primary-color);
+            color: #4caf50;
             overflow: hidden;
             height: 1.5em;
             position: relative;
@@ -158,6 +156,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             padding: 2em 10%;
+            margin: 2em 10%;
             display: flex;
             gap: 2em;
             flex-wrap: wrap;
@@ -166,6 +165,7 @@
         .social-icons {
             display: flex;
             gap: 15px;
+            margin-top: 1em;
         }
 
         .social-icons img {
@@ -182,9 +182,9 @@
         footer {
             text-align: center;
             padding: 1em 0;
-            background: var(--secondary-color);
-            color: var(--light-color);
-            border-top: 3px solid var(--primary-color);
+            background: #333;
+            color: #f4f4f9;
+            border-top: 3px solid #4caf50;
         }
 
         footer p {
@@ -192,7 +192,12 @@
         }
 
         footer strong {
-            color: var(--primary-color);
+            color: #4caf50;
+        }
+
+        a {
+            color: #4caf50;
+            text-decoration: none;
         }
 
         /* Responsive Design */
@@ -206,104 +211,79 @@
                 max-width: 100%;
             }
 
+            .hero .intro {
+                margin-bottom: 2em;
+            }
+
             nav ul {
                 flex-direction: row;
                 gap: 10px;
             }
 
-            html {
-                font-size: 14px;
+            .content-section {
+                margin: 2em 5%;
+                padding: 2em 5%;
             }
         }
 
         html {
             scroll-behavior: smooth;
         }
-        a{
-            color:var(--primary-color);
-        }
     </style>
-    </head>
-    <body>
-        <!-- Header Section -->
-        <header>
-            <h1>ANDA</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>ANDA</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Hero Section -->
-        <section class="hero" id="home">
-            <div class="intro">
-                <h2>Hello, I am Anda Gwele</h2>
-                <p>I am a passionate front-end developer with expertise in HTML,
-                    CSS, JavaScript, and PHP, dedicated to building visually
-                    engaging, responsive, and user-centered websites. I
-                    specialize in transforming ideas into functional, stunning
-                    digital experiences that help businesses connect with their
-                    audience and achieve their goals..</p>
-                <div class="slider-container">
-                    <span class="slider">
-                        <span>Web Developer</span>
-                        <span>Photographer</span>
-                        <span>UI/UX Designer</span>
-                    </span>
-                </div>
-
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="intro">
+            <h2>Hello, I am Anda Gwele</h2>
+            <p>I am a passionate front-end developer with expertise in HTML, CSS, JavaScript, and PHP, dedicated to building visually engaging, responsive, and user-centered websites. I specialize in transforming ideas into functional, stunning digital experiences that help businesses connect with their audience and achieve their goals.</p>
+            <div class="slider-container">
+                <span class="slider">
+                    <span>Web Developer</span>
+                    <span>Photographer</span>
+                    <span>UI/UX Designer</span>
+                </span>
             </div>
-            <img src="My pic.jpg" alt="Profile Image" class="profile-img">
-            <button><a href="CV DOCIE.docx">Download CV</a></button>
-        </section>
+            <button><a href="CV DOCIE.docx" style="color: #f4f4f9; text-decoration: none;">Download CV</a></button>
+        </div>
+        <img src="/placeholder.svg?height=300&width=300" alt="Profile Image" class="profile-img">
+    </section>
 
-        <!-- About Section -->
-        <section class="content-section" id="about">
-            <div data-aos="fade-up">
-                <h3>About Me</h3>
-                <p>With a strong background in front-end technologies, I bring a
-                    blend of creative and technical expertise to each project.
-                    Whether it's developing interactive elements, designing
-                    user-friendly layouts, or optimizing performance, I ensure
-                    every site I create is visually appealing and functional,
-                    meeting the highest standards for user experience.</p>
-                <div class="social-icons">
-                    <a
-                        href="https://www.facebook.com/anda.gwele.1?mibextid=ZbWKwL "><img
-                            src="icons8-facebook-24.png" alt="Facebook"></a>
-                    <a
-                        href="https://www.instagram.com/anda_gwele/profilecard/?igsh=MWpxNXFtcTBhMXZ0bQ== "><img
-                            src="icons8-instagram-30.png"
-                            alt="Instagram"></a>
-                    <a
-                        href="https://www.linkedin.com/in/anda-gwele-58127524b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app "><img
-                            src="icons8-linkedin-logo-30.png"
-                            alt="LinkedIn"></a>
-
-                </div>
+    <!-- About Section -->
+    <section class="content-section" id="about">
+        <div>
+            <h3 style="margin-bottom: 1em; color: #333; font-size: 1.8em;">About Me</h3>
+            <p style="margin-bottom: 1.5em;">With a strong background in front-end technologies, I bring a blend of creative and technical expertise to each project. Whether it's developing interactive elements, designing user-friendly layouts, or optimizing performance, I ensure every site I create is visually appealing and functional, meeting the highest standards for user experience.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/anda.gwele.1" target="_blank">
+                    <img src="/placeholder.svg?height=30&width=30" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/anda_gwele/" target="_blank">
+                    <img src="/placeholder.svg?height=30&width=30" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/anda-gwele-58127524b" target="_blank">
+                    <img src="/placeholder.svg?height=30&width=30" alt="LinkedIn">
+                </a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Footer Section -->
-        <footer>
-            <p>For more information and inquiries, click
-                <strong><a href="contact.html">HERE</a></strong></p>
-            <p>All information presented is accurate and based on
-                experience.</p>
-        </footer>
-
-        <!-- AOS Animation Library -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-        <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 1000, // Animation duration in milliseconds
-            once: true      // Only animate elements once
-        });
-    </script>
-    </body>
+    <!-- Footer Section -->
+    <footer>
+        <p>For more information and inquiries, click <strong><a href="contact.html" style="color: #4caf50;">HERE</a></strong></p>
+        <p>All information presented is accurate and based on experience.</p>
+    </footer>
+</body>
 </html>
